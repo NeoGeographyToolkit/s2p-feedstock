@@ -21,73 +21,41 @@ requirements:
 #       - libgomp                 # [linux]
 
     host:
-        - gdal                      isis4.4.0
-        - ilmbase
-        - openexr
-        - eigen                     3.3.7
-        - pbzip2
-        - gflags
-        - glog
-        - suitesparse               5.7.2
-        - ceres-solver              1.14.0
-        - parallel
-        - flann                     1.9.1
-        - opencv                    3.2.0
-        - openmp                    # [linux]
-        - boost                     1.68
-        - liblapack                 3.8.0
-        - blas                      1.1
-        - geotiff                   1.4.2
-        - proj4                     4.9.3
-        - geos                      3.7.3
-        - hdf5                      1.8.18
-        - imagemagick               isis4.4.0
-        - laszip                    2.1.0
-        - liblas                    isis4.4.0
-        - libnabo                   isis4.4.0
-        - libpointmatcher           isis4.4.0
-        - geoid                     1.0
-        - htdp                      1.0
-        - fgr                       isis4.4.0
-        - theia                     isis4.4.0
-        - isis                      4.4.0 # to catch dependency problems
-        - usgscsm                   1.5.1
-        - csm                       3.0.3.3
-        - visionworkbench           isis4.4.0
+        - curl 7.64.0
+        - libcurl 7.64.0
+        - geos 3.7.3
+        - jpeg 9b
+        - openjpeg 2.1.0
+        - krb5
+        - libedit
+        - libpng 1.6.37
+        - libssh2 1.8.0
+        - libtiff 4.0.9
+        - ncurses 6.2
+        - openssl 1.0.2u
+        - proj4 4.9.3
+        - tk 8.6.10
+        - xz 5.2.5
+        - zlib 1.2.11
+        - isis 4.4.0 # to catch dependency problems
     run:
-        - gdal                      isis4.4.0
-        - ilmbase
-        - openexr
-        - eigen                     3.3.7
-        - pbzip2
-        - gflags
-        - glog
-        - suitesparse               5.7.2
-        - ceres-solver              1.14.0
-        - parallel
-        - flann                     1.9.1
-        - opencv                    3.2.0
-        - openmp                    # [linux]
-        - boost                     1.68
-        - liblapack                 3.8.0
-        - blas                      1.1
-        - geotiff                   1.4.2
-        - proj4                     4.9.3
-        - geos                      3.7.3
-        - hdf5                      1.8.18
-        - imagemagick               isis4.4.0
-        - laszip                    2.1.0
-        - liblas                    isis4.4.0
-        - libnabo                   isis4.4.0
-        - libpointmatcher           isis4.4.0
-        - geoid                     1.0
-        - htdp                      1.0
-        - fgr                       isis4.4.0
-        - theia                     isis4.4.0
-        - isis                      4.4.0 # to catch dependency problems
-        - usgscsm                   1.5.1
-        - csm                       3.0.3.3
-        - visionworkbench           isis4.4.0
+        - curl 7.64.0
+        - libcurl 7.64.0
+        - geos 3.7.3
+        - jpeg 9b
+        - openjpeg 2.1.0
+        - krb5
+        - libedit
+        - libpng 1.6.37
+        - libssh2 1.8.0
+        - libtiff 4.0.9
+        - ncurses 6.2
+        - openssl 1.0.2u
+        - proj4 4.9.3
+        - tk 8.6.10
+        - xz 5.2.5
+        - zlib 1.2.11
+        - isis 4.4.0 # to catch dependency problems
 
 test:
     files:
