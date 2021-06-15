@@ -1,1 +1,1 @@
-Feedstock to build a conda package for MGM (https://github.com/gfacciol/mgm).
+Feedstock to build several stereo correlation tools included with S2P, which was forked at https://github.com/oleg-alexandrov/s2p.
