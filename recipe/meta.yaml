@@ -1,12 +1,12 @@
 {% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
 
 package:
-    name: mgm
+    name: s2p-subset
     version: {{ version }}
 
 source:
-  git_url: git@github.com:gfacciol/mgm.git
-  git_tag: f9713b6
+  git_url: git@github.com:oleg-alexandrov/s2p.git
+  git_tag: f7540c0
 
 build:
     number: 0
@@ -21,40 +21,20 @@ requirements:
 #       - libgomp                 # [linux]
 
     host:
-        - curl 7.64.0
-        - libcurl 7.64.0
-        - geos 3.7.3
         - jpeg 9b
         - openjpeg 2.1.0
-        - krb5
-        - libedit
         - libpng 1.6.37
-        - libssh2 1.8.0
         - libtiff 4.0.9
-        - ncurses 6.2
-        - openssl 1.0.2u
-        - proj4 4.9.3
-        - tk 8.6.10
-        - xz 5.2.5
         - zlib 1.2.11
+        - fftw
         - isis 4.4.0 # to catch dependency problems
     run:
-        - curl 7.64.0
-        - libcurl 7.64.0
-        - geos 3.7.3
         - jpeg 9b
         - openjpeg 2.1.0
-        - krb5
-        - libedit
         - libpng 1.6.37
-        - libssh2 1.8.0
         - libtiff 4.0.9
-        - ncurses 6.2
-        - openssl 1.0.2u
-        - proj4 4.9.3
-        - tk 8.6.10
-        - xz 5.2.5
         - zlib 1.2.11
+        - fftw
         - isis 4.4.0 # to catch dependency problems
 
 test:
