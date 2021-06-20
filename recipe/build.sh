@@ -38,7 +38,7 @@ cd build
 cmake ..                                                   \
     -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CFLAGS"  \
     -DPNG_LIBRARY_RELEASE="${PREFIX}/lib/libpng${EXT}"     \
-    -DTIF_LIBRARY_RELEASE="${PREFIX}/lib/libtif${EXT}"     \
+    -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}"   \
     -DZLIB_LIBRARY_RELEASE="${PREFIX}/lib/libz${EXT}"      \
     -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}"
 make -j${CPU_COUNT}
