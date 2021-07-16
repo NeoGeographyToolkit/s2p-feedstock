@@ -1,4 +1,4 @@
-{% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
+{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
 
 package:
     name: s2p-subset
@@ -21,21 +21,19 @@ requirements:
 #       - libgomp                 # [linux]
 
     host:
-        - jpeg 9b
+        - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
-        - libtiff 4.0.9
+        - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
-        - isis 4.4.0 # to catch dependency problems
     run:
-        - jpeg 9b
+        - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
-        - libtiff 4.0.9
+        - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
-        - isis 4.4.0 # to catch dependency problems
 
 test:
     files:
