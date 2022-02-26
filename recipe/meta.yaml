@@ -14,10 +14,10 @@ build:
 requirements:
     build:
 # Use the local compiler for OSX. See build.sh for details.
-        - {{ compiler('c') }}     # [linux]
-        - {{ compiler('cxx') }}   # [linux]
+        - {{ compiler('c') }}                      # [linux]
+        - {{ compiler('cxx') }}                    # [linux]
         - cmake
-        - llvm-openmp             # [osx]
+        - llvm-openmp                              # [osx]
         - _libgcc_mutex             0.1            # [linux]
         - gcc_impl_linux-64         7.5.0          # [linux]
         - gcc_linux-64              7.5.0          # [linux]
@@ -29,42 +29,42 @@ requirements:
         - _libgcc_mutex             0.1            # [linux]
         - gcc_impl_linux-64         7.5.0          # [linux]
         - gcc_linux-64              7.5.0          # [linux]
-        - krb5                      1.16.3         
         - libgcc                    7.2.0          # [linux]
         - libgcc-devel_linux-64     7.5.0          # [linux]
-        - libgcc-ng                 11.1.0         
+        - libgcc-ng                 11.1.0         # [linux]
+        - krb5                      1.16.3         
         - ncurses                   6.2            
         - openssl                   1.0.2u         
         - python                    3.6.7          
         - python-dateutil           2.8.2          
         - python_abi                3.6            
-        - jpeg 9d
-        - openjpeg 2.1.0
-        - libpng 1.6.37
-        - libtiff 4.0.10
-        - zlib 1.2.11
+        - jpeg                      9d
+        - openjpeg                  2.1.0
+        - libpng                    1.6.37
+        - libtiff                   4.0.10
+        - zlib                      1.2.11
         - fftw
-
+ 
     run:
         - _libgcc_mutex             0.1            # [linux]
         - gcc_impl_linux-64         7.5.0          # [linux]
         - gcc_linux-64              7.5.0          # [linux]
-        - krb5                      1.16.3         
         - libgcc                    7.2.0          # [linux]
         - libgcc-devel_linux-64     7.5.0          # [linux]
         - libgcc-ng                 11.1.0         # [linux]
+        - krb5                      1.16.3         
         - ncurses                   6.2            
         - openssl                   1.0.2u         
         - python                    3.6.7          
         - python-dateutil           2.8.2          
         - python_abi                3.6            
-        - jpeg 9d
-        - openjpeg 2.1.0
-        - libpng 1.6.37
-        - libtiff 4.0.10
-        - zlib 1.2.11
+        - jpeg                      9d
+        - openjpeg                  2.1.0
+        - libpng                    1.6.37
+        - libtiff                   4.0.10
+        - zlib                      1.2.11
         - fftw
-
+ 
 test:
     files:
         imports:
