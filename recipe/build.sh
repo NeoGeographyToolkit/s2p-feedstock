@@ -28,6 +28,9 @@ cd 3rdparty/msmw
 mkdir -p build
 cd build
 cmake .. -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CFLAGS" \
+    -DPNG_LIBRARY_RELEASE="${PREFIX}/lib/libpng${EXT}"     \
+    -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}"   \
+    -DZLIB_LIBRARY_RELEASE="${PREFIX}/lib/libz${EXT}"      \
     -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}"
 make -j${CPU_COUNT}
 cd $baseDir
@@ -46,12 +49,6 @@ cd $baseDir
 
 # Install the desired programs
 
-BIN_DIR=${PREFIX}/plugins/stereo/msmw2/bin
-mkdir -p ${BIN_DIR}
-/bin/cp -fv \
-    3rdparty/msmw2/build/libstereo_newversion/iip_stereo_correlation_multi_win2_newversion \
-    ${BIN_DIR}/msmw2
-
 BIN_DIR=${PREFIX}/plugins/stereo/mgm/bin
 mkdir -p ${BIN_DIR}
 /bin/cp -fv 3rdparty/mgm/mgm ${BIN_DIR}
@@ -61,4 +58,10 @@ mkdir -p ${BIN_DIR}
 /bin/cp -fv \
     3rdparty/msmw/build/libstereo/iip_stereo_correlation_multi_win2 \
     ${BIN_DIR}/msmw
+
+BIN_DIR=${PREFIX}/plugins/stereo/msmw2/bin
+mkdir -p ${BIN_DIR}
+/bin/cp -fv \
+    3rdparty/msmw2/build/libstereo_newversion/iip_stereo_correlation_multi_win2_newversion \
+    ${BIN_DIR}/msmw2
 

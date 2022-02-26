@@ -1,4 +1,4 @@
-{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
+{% set version = "isis5.0.1_bugfix" %} # synched up to isis dependencies for this version
 
 package:
     name: s2p-subset
@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: git@github.com:oleg-alexandrov/s2p.git
-  git_tag: f7540c0
+  git_tag: 55e37df
 
 build:
     number: 0
@@ -19,21 +19,61 @@ requirements:
         - cmake
         - llvm-openmp             # [osx]
 #       - libgomp                 # [linux]
+# Thees are temporary. Trying to prevent conda conflicts later.
+        - _libgcc_mutex             0.1            # [linux]
+        - gcc_impl_linux-64         7.5.0          # [linux]
+        - gcc_linux-64              7.5.0          # [linux]
+        - krb5                      1.16.3         # [linux]
+        - libgcc                    7.2.0          # [linux]
+        - libgcc-devel_linux-64     7.5.0          # [linux]
+        - libgcc-ng                 11.1.0         # [linux]
+        - ncurses                   6.2            # [linux]
+        - openssl                   1.0.2u         # [linux]
+        - python                    3.6.7          # [linux]
+        - python-dateutil           2.8.2          # [linux]
+        - python_abi                3.6            # [linux]
 
-    host:
+host:
         - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
-    run:
+# Thees are temporary. Trying to prevent conda conflicts later.
+        - _libgcc_mutex             0.1            # [linux]
+        - gcc_impl_linux-64         7.5.0          # [linux]
+        - gcc_linux-64              7.5.0          # [linux]
+        - krb5                      1.16.3         # [linux]
+        - libgcc                    7.2.0          # [linux]
+        - libgcc-devel_linux-64     7.5.0          # [linux]
+        - libgcc-ng                 11.1.0         # [linux]
+        - ncurses                   6.2            # [linux]
+        - openssl                   1.0.2u         # [linux]
+        - python                    3.6.7          # [linux]
+        - python-dateutil           2.8.2          # [linux]
+        - python_abi                3.6            # [linux]
+
+run:
         - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
+# Thees are temporary. Trying to prevent conda conflicts later.
+        - _libgcc_mutex             0.1            # [linux]
+        - gcc_impl_linux-64         7.5.0          # [linux]
+        - gcc_linux-64              7.5.0          # [linux]
+        - krb5                      1.16.3         # [linux]
+        - libgcc                    7.2.0          # [linux]
+        - libgcc-devel_linux-64     7.5.0          # [linux]
+        - libgcc-ng                 11.1.0         # [linux]
+        - ncurses                   6.2            # [linux]
+        - openssl                   1.0.2u         # [linux]
+        - python                    3.6.7          # [linux]
+        - python-dateutil           2.8.2          # [linux]
+        - python_abi                3.6            # [linux]
 
 test:
     files:
