@@ -18,8 +18,14 @@ requirements:
         - {{ compiler('cxx') }}   # [linux]
         - cmake
         - llvm-openmp             # [osx]
-#       - libgomp                 # [linux]
-# Thees are temporary. Trying to prevent conda conflicts later.
+        - _libgcc_mutex             0.1            # [linux]
+        - gcc_impl_linux-64         7.5.0          # [linux]
+        - gcc_linux-64              7.5.0          # [linux]
+        - libgcc                    7.2.0          # [linux]
+        - libgcc-devel_linux-64     7.5.0          # [linux]
+        - libgcc-ng                 11.1.0         # [linux]
+
+    host:
         - _libgcc_mutex             0.1            # [linux]
         - gcc_impl_linux-64         7.5.0          # [linux]
         - gcc_linux-64              7.5.0          # [linux]
@@ -32,15 +38,14 @@ requirements:
         - python                    3.6.7          # [linux]
         - python-dateutil           2.8.2          # [linux]
         - python_abi                3.6            # [linux]
-
-host:
         - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
-# Thees are temporary. Trying to prevent conda conflicts later.
+
+    run:
         - _libgcc_mutex             0.1            # [linux]
         - gcc_impl_linux-64         7.5.0          # [linux]
         - gcc_linux-64              7.5.0          # [linux]
@@ -53,27 +58,12 @@ host:
         - python                    3.6.7          # [linux]
         - python-dateutil           2.8.2          # [linux]
         - python_abi                3.6            # [linux]
-
-run:
         - jpeg 9d
         - openjpeg 2.1.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11
         - fftw
-# Thees are temporary. Trying to prevent conda conflicts later.
-        - _libgcc_mutex             0.1            # [linux]
-        - gcc_impl_linux-64         7.5.0          # [linux]
-        - gcc_linux-64              7.5.0          # [linux]
-        - krb5                      1.16.3         # [linux]
-        - libgcc                    7.2.0          # [linux]
-        - libgcc-devel_linux-64     7.5.0          # [linux]
-        - libgcc-ng                 11.1.0         # [linux]
-        - ncurses                   6.2            # [linux]
-        - openssl                   1.0.2u         # [linux]
-        - python                    3.6.7          # [linux]
-        - python-dateutil           2.8.2          # [linux]
-        - python_abi                3.6            # [linux]
 
 test:
     files:
