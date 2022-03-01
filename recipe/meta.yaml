@@ -12,64 +12,41 @@ build:
     number: 0
 
 requirements:
-    build:
+  build:
 # Use the local compiler for OSX. See build.sh for details.
-        - {{ compiler('c') }}                      # [linux]
-        - {{ compiler('cxx') }}                    # [linux]
-        - cmake
-        - llvm-openmp               12.0.1         # [osx]
-        - _libgcc_mutex             0.1            # [linux]
-        - gcc_impl_linux-64         7.5.0          # [linux]
-        - gcc_linux-64              7.5.0          # [linux]
-        - libgcc                    7.2.0          # [linux]
-        - libgcc-devel_linux-64     7.5.0          # [linux]
-        - libgcc-ng                 11.1.0         # [linux]
+    - {{ compiler('c') }}                      # [linux]
+    - {{ compiler('cxx') }}                    # [linux]
+    - cmake
 
-    host:
-        - llvm-openmp               12.0.1         # [osx]
-        - _libgcc_mutex             0.1            # [linux]
-        - gcc_impl_linux-64         7.5.0          # [linux]
-        - gcc_linux-64              7.5.0          # [linux]
-        - libgcc                    7.2.0          # [linux]
-        - libgcc-devel_linux-64     7.5.0          # [linux]
-        - libgcc-ng                 11.1.0         # [linux]
-        - krb5                      1.16.3
-        - libssh2                   1.8.0 
-        - freetype                  2.7        
-        - ncurses                   6.2            
-        - openssl                   1.0.2u         
-        - python                    3.6.7          
-        - python-dateutil           2.8.2          
-        - python_abi                3.6            
-        - jpeg                      9d
-        - openjpeg                  2.1.0=6
-        - libpng                    1.6.37
-        - libtiff                   4.0.10
-        - zlib                      1.2.11
-        - fftw
+  host:
+    - libgcc-ng >=9.3.0    # [linux]
+    - libstdcxx-ng >=9.3.0 # [linux] 
+    - llvm-openmp >=12.0.1 # [osx] 
+    - fftw
+    - jpeg 9d.*
+    - jpeg >=9d,<10a
+    - libpng 1.6.37.*
+    - libpng >=1.6.37,<1.7.0a0
+    - libtiff 4.0.10.*
+    - libtiff >=4.0.10,<5.0a0
+    - openjpeg 2.1.0.*
+    - zlib 1.2.11.*
+    - zlib >=1.2.11,<1.3.0a0
  
-    run:
-        - llvm-openmp               12.0.1         # [osx]
-        - _libgcc_mutex             0.1            # [linux]
-        - gcc_impl_linux-64         7.5.0          # [linux]
-        - gcc_linux-64              7.5.0          # [linux]
-        - libgcc                    7.2.0          # [linux]
-        - libgcc-devel_linux-64     7.5.0          # [linux]
-        - libgcc-ng                 11.1.0         # [linux]
-        - krb5                      1.16.3         
-        - libssh2                   1.8.0         
-        - freetype                  2.7        
-        - ncurses                   6.2            
-        - openssl                   1.0.2u         
-        - python                    3.6.7          
-        - python-dateutil           2.8.2          
-        - python_abi                3.6            
-        - jpeg                      9d
-        - openjpeg                  2.1.0=6
-        - libpng                    1.6.37
-        - libtiff                   4.0.10
-        - zlib                      1.2.11
-        - fftw
+  run:
+    - libgcc-ng >=9.3.0    # [linux]
+    - libstdcxx-ng >=9.3.0 # [linux] 
+    - llvm-openmp >=12.0.1 # [osx] 
+    - fftw
+    - jpeg 9d.*
+    - jpeg >=9d,<10a
+    - libpng 1.6.37.*
+    - libpng >=1.6.37,<1.7.0a0
+    - libtiff 4.0.10.*
+    - libtiff >=4.0.10,<5.0a0
+    - openjpeg 2.1.0.*
+    - zlib 1.2.11.*
+    - zlib >=1.2.11,<1.3.0a0
  
 test:
     files:
