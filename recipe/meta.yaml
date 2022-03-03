@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: git@github.com:oleg-alexandrov/s2p.git
-  git_tag: 53354ae
+  git_tag: afd6aa4
 
 build:
     number: 0
