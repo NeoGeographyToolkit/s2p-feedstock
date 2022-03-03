@@ -2,7 +2,7 @@
 
 set -e
 
-export CFLAGS="-I$PREFIX/include -O3 -DNDEBUG -ffast-math -march=native"
+export CFLAGS="-I$PREFIX/include -O3 -DNDEBUG -march=native"
 export LDFLAGS="-L$PREFIX/lib"
 
 # Fix for missing liblzma
