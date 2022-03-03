@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: git@github.com:oleg-alexandrov/s2p.git
-  git_tag: 6502d4c
+  git_tag: 53354ae
 
 build:
     number: 0
@@ -21,7 +21,7 @@ requirements:
     - libgcc-ng >=9.3.0    # [linux]
     - libstdcxx-ng >=9.3.0 # [linux] 
     - llvm-openmp >=12.0.1 # [osx] 
-    - fftw
+    - fftw          3.3.8
     - jpeg 9d.*
     - jpeg >=9d,<10a
     - libpng 1.6.37.*
@@ -36,7 +36,7 @@ requirements:
     - libgcc-ng >=9.3.0    # [linux]
     - libstdcxx-ng >=9.3.0 # [linux] 
     - llvm-openmp >=12.0.1 # [osx] 
-    - fftw
+    - fftw          3.3.8
     - jpeg 9d.*
     - jpeg >=9d,<10a
     - libpng 1.6.37.*
