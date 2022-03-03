@@ -6,16 +6,15 @@ package:
 
 source:
   git_url: git@github.com:oleg-alexandrov/s2p.git
-  git_tag: 55e37df
+  git_tag: 6502d4c
 
 build:
     number: 0
 
 requirements:
   build:
-# Use the local compiler for OSX. See build.sh for details.
-    - {{ compiler('c') }}                      # [linux]
-    - {{ compiler('cxx') }}                    # [linux]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
 
   host:
