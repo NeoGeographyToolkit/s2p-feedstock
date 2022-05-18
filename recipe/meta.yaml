@@ -1,4 +1,4 @@
-{% set version = "isis5.0.1_bugfix" %} # synched up to isis dependencies for this version
+{% set version = "isis6" %} # synched up to isis dependencies for this version
 
 package:
     name: s2p-subset
@@ -22,30 +22,26 @@ requirements:
     - libstdcxx-ng >=9.3.0 # [linux] 
     - llvm-openmp >=12.0.1 # [osx] 
     - fftw          3.3.8
-    - jpeg 9d.*
-    - jpeg >=9d,<10a
-    - libpng 1.6.37.*
-    - libpng >=1.6.37,<1.7.0a0
+    - jpeg 9*
+    - libpng 1.6.37
     - libtiff 4.0.10.*
     - libtiff >=4.0.10,<5.0a0
-    - openjpeg 2.1.0.*
+    - openjpeg 2.3.0
     - zlib 1.2.11.*
-    - zlib >=1.2.11,<1.3.0a0
+    - zstd
  
   run:
     - libgcc-ng >=9.3.0    # [linux]
     - libstdcxx-ng >=9.3.0 # [linux] 
     - llvm-openmp >=12.0.1 # [osx] 
     - fftw          3.3.8
-    - jpeg 9d.*
-    - jpeg >=9d,<10a
-    - libpng 1.6.37.*
-    - libpng >=1.6.37,<1.7.0a0
+    - jpeg 9*
+    - libpng 1.6.37
     - libtiff 4.0.10.*
     - libtiff >=4.0.10,<5.0a0
-    - openjpeg 2.1.0.*
+    - openjpeg 2.3.0
     - zlib 1.2.11.*
-    - zlib >=1.2.11,<1.3.0a0
+    - zstd
  
 test:
     files:
