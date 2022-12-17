@@ -1,4 +1,4 @@
-{% set version = "isis6" %} # synched up to isis dependencies for this version
+{% set version = "isis7" %} # synched up to isis dependencies for this version
 
 package:
     name: s2p-subset
@@ -18,29 +18,21 @@ requirements:
     - cmake
 
   host:
-    - libgcc-ng >=9.3.0    # [linux]
-    - libstdcxx-ng >=9.3.0 # [linux] 
-    - llvm-openmp >=12.0.1 # [osx] 
-    - fftw          3.3.8
-    - jpeg 9*
-    - libpng 1.6.37
-    - libtiff 4.0.10.*
-    - libtiff >=4.0.10,<5.0a0
+    - fftw 3.3.10
+    - jpeg 9e
+    - libpng 1.6.39
+    - libtiff 4.4.0
     - openjpeg 2.3.0
-    - zlib 1.2.11.*
+    - zlib 1.2.13
     - zstd
  
   run:
-    - libgcc-ng >=9.3.0    # [linux]
-    - libstdcxx-ng >=9.3.0 # [linux] 
-    - llvm-openmp >=12.0.1 # [osx] 
-    - fftw          3.3.8
-    - jpeg 9*
-    - libpng 1.6.37
-    - libtiff 4.0.10.*
-    - libtiff >=4.0.10,<5.0a0
+    - fftw 3.3.10
+    - jpeg 9e
+    - libpng 1.6.39
+    - libtiff 4.4.0
     - openjpeg 2.3.0
-    - zlib 1.2.11.*
+    - zlib 1.2.13
     - zstd
  
 test:
