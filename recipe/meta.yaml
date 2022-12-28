@@ -44,7 +44,7 @@ test:
 about:
     home:
     license: APACHE II
-    summary:
+    summary: A subset algorithms from the S2P satellite processing package
 
 extra:
   recipe-maintainers:
