@@ -1,4 +1,4 @@
-{% set version = "isis7" %} # synched up to isis dependencies for this version
+{% set version = "asp3.4.0_alpha" %} # synched up to isis dependencies for this version
 
 package:
     name: s2p-subset
@@ -19,19 +19,17 @@ requirements:
 
   host:
     - fftw 3.3.10
-    - jpeg 9e
     - libpng 1.6.39
-    - libtiff 4.4.0
-    - openjpeg 2.3.0
+    - libtiff 4.6.0
+    - openjpeg 2.5.0
     - zlib 1.2.13
     - zstd
  
   run:
     - fftw 3.3.10
-    - jpeg 9e
     - libpng 1.6.39
-    - libtiff 4.4.0
-    - openjpeg 2.3.0
+    - libtiff 4.6.0
+    - openjpeg 2.5.0
     - zlib 1.2.13
     - zstd
  
