@@ -6,7 +6,8 @@ package:
 
 source:
   git_url: git@github.com:oleg-alexandrov/s2p.git
-  git_tag: afd6aa4
+  # No tag, just use latest in HEAD  
+  #  git_tag: afd6aa4 
 
 build:
     number: 0
