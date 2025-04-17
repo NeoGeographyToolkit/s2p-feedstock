@@ -18,13 +18,17 @@ fi
 
 # Build the desired programs
 
+echo Building MGM
 cd 3rdparty/mgm
+echo Work dir: $(pwd)
 perl -pi -e "s#CFLAGS=#CFLAGS=$CFLAGS #g" Makefile
 perl -pi -e "s#LDFLAGS=#LDFLAGS=$LDFLAGS #g" Makefile 
 make -j${CPU_COUNT}
 cd $baseDir
 
+echo Building msmw
 cd 3rdparty/msmw
+echo Work dir: $(pwd)
 mkdir -p build
 cd build
 cmake .. -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CFLAGS" \
@@ -35,7 +39,9 @@ cmake .. -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CFLAGS" \
 make -j${CPU_COUNT}
 cd $baseDir
 
+echo Building msmw2
 cd 3rdparty/msmw2
+echo Work dir: $(pwd)
 mkdir -p build
 cd build
 cmake ..                                                   \
