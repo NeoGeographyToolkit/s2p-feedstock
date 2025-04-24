@@ -10,8 +10,11 @@ perl -pi -e "s#(/[^\s]*?lib)/lib([^\s]+).la#-L\$1 -l\$2#g" ${PREFIX}/lib/*.la
 
 baseDir=$(pwd)
 
+extraFlag=""
 if [ "$(uname)" = "Darwin" ]; then
     EXT='.dylib'
+    extraFlag="-DCMAKE_SHARED_LINKER_FLAGS=-headerpad_max_install_names"
+    export LDFLAGS="$LDFLAGS -headerpad_max_install_names"
 else
     EXT='.so'
 fi
@@ -22,7 +25,7 @@ echo Building MGM
 cd 3rdparty/mgm
 echo Work dir: $(pwd)
 perl -pi -e "s#CFLAGS=#CFLAGS=$CFLAGS #g" Makefile
-perl -pi -e "s#LDFLAGS=#LDFLAGS=$LDFLAGS #g" Makefile 
+perl -pi -e "s#LDFLAGS=#LDFLAGS='$LDFLAGS' #g" Makefile 
 make -j${CPU_COUNT}
 cd $baseDir
 
@@ -35,7 +38,7 @@ cmake .. -DCMAKE_C_FLAGS="$CFLAGS" -DCMAKE_CXX_FLAGS="$CFLAGS" \
     -DPNG_LIBRARY_RELEASE="${PREFIX}/lib/libpng${EXT}"     \
     -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}"   \
     -DZLIB_LIBRARY_RELEASE="${PREFIX}/lib/libz${EXT}"      \
-    -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}"
+    -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}" $extraFlag
 make -j${CPU_COUNT}
 cd $baseDir
 
@@ -49,7 +52,7 @@ cmake ..                                                   \
     -DPNG_LIBRARY_RELEASE="${PREFIX}/lib/libpng${EXT}"     \
     -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}"   \
     -DZLIB_LIBRARY_RELEASE="${PREFIX}/lib/libz${EXT}"      \
-    -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}"
+    -DJPEG_LIBRARY="${PREFIX}/lib/libjpeg${EXT}" $extraFlag
 make -j${CPU_COUNT}
 cd $baseDir
 
